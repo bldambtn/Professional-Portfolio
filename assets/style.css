@@ -1,0 +1,201 @@
+/*sets custom variables*/
+:root {
+    /*sets main font color*/
+    --mainfontcolor: #814cad;
+    /*sets the backgroun color for main sections*/
+    --infoboxes: #a3d4d1;
+}
+
+/*sets a background image to the full page and to repeat if needed*/
+body, html {
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+/*targets header element*/
+header {
+    /*sets padding around header to 100px all directions*/
+    padding: 100px;
+    /*instructs contents of header to use flex display*/
+    display: flex;
+    /*extends instructions to flex display to put evenly space 
+    the profile image and the nav, header*/
+    justify-content: space-evenly;
+    /*extends instructions to flex display to wrap items as
+    the screen size changes*/
+    flex-wrap: wrap;
+}
+
+/*targets profileimg class*/
+.profileimg {
+    /*sets max height for profile image*/
+    max-height: 500px;    
+    /*rounds the edges of profile image*/
+    border-radius: 15px;
+}
+
+/*targets the nav element*/
+nav {
+    /*displays ul and h1 in a column*/
+    display: column;    
+}
+
+/*targets ul in the header element*/
+header ul {
+    /*temoves margin at ul level that applied at header level
+    and extends the bottom margin by 150px*/
+    margin: 0px 0px 150px;
+    /*removes padding at ul level that applied at header level*/
+    padding: 0px;
+    /*assigns flex display to ul content*/
+    display: flex;
+    /*evenly spaces display for ul*/
+    justify-content: space-evenly;
+}
+
+/*targets the li element within the header*/
+header li {
+    /*places the list items in a line instead of a stack*/
+    display: inline-block;
+    /*rounds edges of invisible nav box, visible when hovered over*/
+    border-radius: 20px;
+}
+
+/*targets the li element within the header and adds a hover instruction*/
+header li:hover {
+    /*when curser covers over nav item, it glows with a box-shadow*/
+    box-shadow: 0 0 100px #5aa5a0;
+}
+
+/*targets the anchor element within the header*/
+header a {
+    /*removes underline from nav items*/
+    text-decoration: none;
+    /*sets nav item font size to 48px*/
+    font-size: 48px;
+    /*sets the nav item font color*/
+    color: var(--mainfontcolor);
+}
+
+/*targets the h1 element*/
+h1 {
+    /*sets h1 font size*/
+    font-size: 73px;
+    /*sets h1 font color*/
+    color: var(--mainfontcolor);
+}
+
+/*targets the main element*/
+main {
+    /*sets a gap of 1px between each column*/
+    padding: 0px 100px;
+}
+
+/*targets the article element*/
+article {
+    /*sets display to flex*/
+    display: flex;
+    /*sets flex display to wrap contents*/
+    flex-wrap: wrap;
+    /*sets padding to 50px on the sides*/
+    padding: 0px 50px;
+    /*creates a 10px gap between each article up/down*/
+    row-gap: 10px;
+    /*creates a 10px gap between each article left/right*/
+    column-gap: 10px;    
+}
+
+/*targets section element*/
+section {
+    /*links to flex display in article element
+    fits items across page width-wise*/
+    flex: 4;
+}
+
+/*targets the info class*/
+.info {    
+    /*sets font size for info class*/
+    font-size: 18px;    
+    /*gives info class rounded corners*/
+    border-radius: 15px;
+    /*assigns background color to class*/
+    background-color: var(--infoboxes);
+    /*expands on flex instructions in parent elemnts*/
+    flex: 1 1 49%;
+}
+
+/*targets the h2 element*/
+h2 {
+    /*sets the font-size*/
+    font-size: 48px;
+    /*sets text alignment*/
+    text-align: center;
+    /*sets margin for h2 items*/
+    margin: 10px 30px;
+    /*sets h2 color to purple*/
+    color: var(--mainfontcolor);
+}
+
+/*targets ul element in the main element*/
+main ul {
+    /*removes padding around ul element*/
+    padding: 0px;
+    /*sets ul display to flex*/
+    display: flex;
+    /*makes contact links evenly spaced*/
+    justify-content: space-evenly;
+}
+
+/*targets the li element within the main element*/
+main li {
+    /*displays contact link in line*/
+    display: inline-block;
+    /*increases padding between contact links and h2*/
+    padding-top: 50px;
+}
+
+/*targets the anchor element within the main element*/
+main a {
+    /*removes underlying of contact items*/
+    text-decoration: none;
+    /*sets contact item link font size*/
+    font-size: 24px;
+    /*sets link color to black*/
+    color: #000;
+}
+
+/*targets the p element*/
+p {
+    /*wraps text within the paragraph*/
+    text-wrap: wrap;
+    /*sets a margin of 15px top/bottom and 
+    a margin of 30px left/right between
+    each paragraph*/
+    margin: 15px 30px;
+}
+
+/*targets the image in my work class*/
+article img {
+    /*sets max width of image to 80% of the article container*/
+    max-width: 80%;
+    /*sets margin to auto*/
+    margin: auto;
+    /*instructs items to display in block*/
+    display: block;
+    /*rounds image edges by 15px*/
+    border-radius: 15px;
+    /*sets a 15px margin below the image*/
+    margin-bottom: 15px;     
+}
+
+/*Targets the footer element*/
+footer {
+    /*sets a 30px padding in all directions*/
+    padding: 30px;
+    /*aligns text ceter*/
+    text-align: center;
+}
