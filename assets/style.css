@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /*sets custom variables*/
 :root {
     /*sets main font color*/
@@ -61,14 +65,14 @@ header ul {
 header li {
     /*places the list items in a line instead of a stack*/
     display: inline-block;
-    /*rounds edges of invisible nav box, visible when hovered over*/
-    border-radius: 20px;
 }
 
 /*targets the li element within the header and adds a hover instruction*/
-header li:hover {
-    /*when curser covers over nav item, it glows with a box-shadow*/
+header a:hover {
+    /*when curser hovers over nav item, it glows with a box-shadow*/
     box-shadow: 0 0 100px #5aa5a0;
+    /*when curser hovers over nav item, it glows to match the box shadow*/
+    background: rgba(90, 165, 160, 0.25);
 }
 
 /*targets the anchor element within the header*/
@@ -126,6 +130,7 @@ section {
     background-color: var(--infoboxes);
     /*expands on flex instructions in parent elemnts*/
     flex: 1 1 49%;
+    position: relative;
 }
 
 /*targets the h2 element*/
@@ -188,14 +193,279 @@ article img {
     display: block;
     /*rounds image edges by 15px*/
     border-radius: 15px;
-    /*sets a 15px margin below the image*/
-    margin-bottom: 15px;     
+    /*sets a 25px margin below the image*/
+    margin-bottom: 25px;    
 }
 
-/*Targets the footer element*/
+/*targets the mywork class*/
+.mywork {
+    /*sets the title box over the refactor image*/
+    position: relative;
+}
+
+/*targets the overlay class*/
+.overlay {
+    /*sets the overlay position*/
+    position: absolute; 
+    /*ties position to the bottom of the section*/
+    bottom: 0; 
+    /*sets background color*/
+    background: rgb(163, 212, 209);
+    /*makes background green translucent*/
+    background: rgba(163, 212, 209, 0.5);
+    /*sets overlay width to full width of box*/
+    width: 100%;
+    /*sets overlay transition speed*/
+    transition: .5s ease;
+    /*makes overlay transparent until hover psuedo-class*/
+    opacity:0;
+    /*sets 30px padding around text*/
+    padding: 30px;
+    /*aligns text center*/
+    text-align: center;
+}
+
+/*targets the anchor element within the overlay class*/
+.overlay a {
+    /*sets overlay color to match header purple*/
+    color: var(--mainfontcolor);
+    /*sets font size*/
+    font-size: 30px;
+    /*sets font weight to make it appear stronger/bolder*/
+    font-weight: 600;
+}
+
+/*targets the overlay clas in the mywork:hover pseudo-class*/
+.mywork:hover .overlay {
+    /*when curser hovers over the section, section becomes visible*/
+    opacity: 1;
+}
+
+
+/*targets the footer element*/
 footer {
     /*sets a 30px padding in all directions*/
     padding: 30px;
     /*aligns text ceter*/
     text-align: center;
 }
+
+/*media instructions for large screen*/
+@media screen and (max-width: 1205px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    header {
+        flex-direction: column;
+    }
+
+    .profileimg {
+        order: 1;
+        max-width: 500px;
+        padding: 0px;
+        margin: 0px;
+        align-self: center;
+    }
+
+    header nav {
+        order: 2;
+        margin-top: 50px;
+        padding: 0px;
+        align-self: center;
+    }
+
+    header ul {
+        display: block;
+    }
+
+    header h1 {
+        order: 3;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article {
+        display: flex;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    .info {
+        flex: 0 0 100%;
+    }
+}
+
+/*media instructions for medium screen*/
+@media screen and (max-width: 804px) {
+    header {
+        /*sets padding around header to 100px all directions*/
+        padding: 50px;
+        /*instructs contents of header to use flex display*/
+        display: flex;
+        /*extends instructions to flex display to put evenly space 
+        the profile image and the nav, header*/
+        justify-content: space-evenly;
+        /*extends instructions to flex display to wrap items as
+        the screen size changes*/
+        flex-wrap: wrap;
+    }
+
+    .profileimg {
+        order: 1;
+        max-width: 400px;
+        padding: 0px;
+        margin: 0px;
+        align-self: center;
+    }    
+
+    header nav {
+        order: 2;
+        margin: 0px;
+        padding: 40px 0px;
+        display: column;     
+    }
+
+    /*targets ul in the header element*/
+    header ul {
+        margin: 0px 0px 55px;
+        /*assigns flex display to ul content*/
+        display: flex;
+        /*evenly spaces display for ul*/
+        justify-content: space-evenly;
+    }
+
+    /*targets the li element within the header*/
+    header li {
+        /*places the list items in a line instead of a stack*/
+        display: block;
+    }
+
+    header a {
+        font-size: 35px;      
+    }
+
+    header h1 {
+        order: 3;
+        font-size: 48px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article {
+        display: flex;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    main li {
+        padding: 15px 0px 0px;
+    }
+
+    main a {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .info {
+        flex: 0 0 100%;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    footer h2{
+        /*sets a 30px padding in all directions*/
+    padding: 0px;
+    margin: 0px;
+    /*aligns text ceter*/
+    text-align: center;
+    font-size: 30px;
+    }
+}
+
+/*media instructions for small screen*/
+@media screen and (max-width: 530px) {
+    header {
+        /*sets padding around header to 100px all directions*/
+        padding: 50px;
+        /*instructs contents of header to use flex display*/
+        display: flex;
+        /*extends instructions to flex display to put evenly space 
+        the profile image and the nav, header*/
+        display: center;
+        /*extends instructions to flex display to wrap items as
+        the screen size changes*/
+        
+    }
+
+    .profileimg {
+        order: 1;
+        max-width: 250px;
+        padding: 0px;
+        margin: 0px;
+    }    
+
+    header nav {
+        order: 2;
+        margin: 0px;
+        padding: 40px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;     
+    }
+
+    /*targets ul in the header element*/
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 40px;
+    }
+
+    header a {
+        color: white;
+        font-size: 35px;      
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 48px;
+        margin: 0;
+        padding: 0px;
+    }
+
+    main {
+        padding: 0px 50px 0px;
+    }
+
+    article {
+       padding: 0px;
+    }
+
+    main a {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .info {
+        flex: 0 0 100%;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    footer h2{
+        /*sets a 30px padding in all directions*/
+    padding: 0px;
+    margin: 0px;
+    /*aligns text ceter*/
+    text-align: center;
+    font-size: 20px;
+    }
+}
+  
