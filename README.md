@@ -7,15 +7,15 @@ A Professional Portfolio for K. Stanton with a profile photo, links to contact m
 
 ### Desktop View
 
-![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](../Professional-Portfolio/assets/images/Desktop1.png)
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](./assets/images/Desktop1.png)
 
-![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 2](../Professional-Portfolio/assets/images/Desktop2.png)
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 2](./assets/images/Desktop2.png)
 
 ### Mobile View
 
-![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](../Professional-Portfolio/assets/images/Mobile1.png)
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](./assets/images/Mobile1.png)
 
-![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](../Professional-Portfolio/assets/images/Mobile2.png)
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](./assets/images/Mobile2.png)
 
 ## Link to Deployed Application
 
