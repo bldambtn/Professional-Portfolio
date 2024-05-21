@@ -3,6 +3,24 @@
 ## Description
 A Professional Portfolio for K. Stanton with a profile photo, links to contact me, an about me section, and a 'My Works' section to display completed projects. 
 
+## Mock Up
+
+### Desktop View
+
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](../Professional-Portfolio/assets/images/img%201.png)
+
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 2](../Professional-Portfolio/assets/images/img%202.png)
+
+### Mobile View
+
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](../Professional-Portfolio/assets/images/img%203.png)
+
+![My personal portfolio includes a profile image, links to my contact information, an about me section, and my completed works. View 1](../Professional-Portfolio/assets/images/img%204.png)
+
+## Link to Deployed Application
+
+* link
+
 ## Credits
 
 ### Image Sources
